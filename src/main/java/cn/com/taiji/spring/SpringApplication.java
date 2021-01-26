@@ -19,13 +19,20 @@ public class SpringApplication {
 //        ApplicationContext context=new AnnotationConfigApplicationContext("cn.com.taiji.spring.AppConfig");
 //        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
 
+
+//        System.out.println(SingleTonUser.getInstance());
+//        System.out.println(SingleTonUser.getInstance());
+
         AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
 //        context.addApplicationListener((new ApplicationStartedListener()));
         context.refresh();
 //        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
         UserService userService=context.getBean(UserService.class);
+        UserService userService1=context.getBean(UserService.class);
         userService.save();
+        System.out.println(userService);
+        System.out.println(userService1);
     }
 
 }

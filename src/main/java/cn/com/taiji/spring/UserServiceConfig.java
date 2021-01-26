@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class UserServiceConfig {
 
-    @Bean
-    public UserService userService(){
-        return new UserService();
-    }
+//    @Bean
+//    public UserService userService(){
+//        return new UserService();
+//    }
 }

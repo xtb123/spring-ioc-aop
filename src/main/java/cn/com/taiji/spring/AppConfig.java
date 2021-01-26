@@ -13,13 +13,14 @@ import org.springframework.util.CollectionUtils;
 @ComponentScan("cn.com.taiji.spring")//扫描包
 //@Import({UserDaoConfig.class,UserServiceConfig.class,SchedueTask.class})
 public class AppConfig {
-    @Bean
-    public UserService userService(){
-        UserService userService=new UserService();
-//        userService.setUserDao(userDao);
-        return userService;
-    }
-//
+//    @Bean
+//    public UserService userService(){
+//        UserService userService=new UserService();
+////        userService.setUserDao(userDao);
+//        return userService;
+//    }
+
+
 //    @Bean
 //    public UserDao userDao(){
 //        return new UserDao();
