@@ -21,8 +21,9 @@ public class SpringApplication {
 
         AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
+//        context.addApplicationListener((new ApplicationStartedListener()));
         context.refresh();
-        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
+//        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
         UserService userService=context.getBean(UserService.class);
         userService.save();
     }
