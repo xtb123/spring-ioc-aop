@@ -28,11 +28,25 @@ public class SpringApplication {
 //        context.addApplicationListener((new ApplicationStartedListener()));
         context.refresh();
 //        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
-        UserService userService=context.getBean(UserService.class);
-        UserService userService1=context.getBean(UserService.class);
-        userService.save();
-        System.out.println(userService);
-        System.out.println(userService1);
+//        UserService userService=context.getBean(UserService.class);
+//        UserService userService1=context.getBean(UserService.class);
+//        userService.save();
+//        System.out.println(userService);
+//        System.out.println(userService1);
+
+        UserDao userDao=context.getBean(UserDao.class);
+//        System.out.println(userDao.getClass());
+        //System.out.println(UserDao.class);
+        //System.out.println(userDao.getClass());
+       // System.out.println(UserDao.class.isAssignableFrom(userDao.getClass()));
+        //System.out.println(userDao.getClass().getSuperclass());
+        userDao.save();
+        userDao.update();
+
+//        UserService userService= (UserService) context.getBean("userService");
+//        UserService userService=context.getBean(UserService.class);
+//        System.out.println(userService.getClass());
+//        userService.save();
     }
 
 }

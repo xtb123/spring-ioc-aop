@@ -10,8 +10,8 @@ import org.springframework.util.CollectionUtils;
 public class ApplicationStartedListener implements ApplicationListener<ContextRefreshedEvent> {
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event){
-        ApplicationContext context=event.getApplicationContext();
-        System.out.println(event.getTimestamp());
-        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
+//        ApplicationContext context=event.getApplicationContext();
+//        System.out.println(event.getTimestamp());
+//        CollectionUtils.arrayToList(context.getBeanDefinitionNames()).forEach(item-> System.out.println(item));
     }
 }
